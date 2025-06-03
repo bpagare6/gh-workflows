@@ -11,8 +11,9 @@ jobs:
 
     steps:
       - name: Send Slack notification
-        uses: slackapi/slack-github-action@v1.24.0
+        uses: slackapi/slack-github-action@v1.22.0
         with:
+          channel-id: C08V8NGRZAN
           payload: >
             {
               "channel": "C08V8NGRZAN",
