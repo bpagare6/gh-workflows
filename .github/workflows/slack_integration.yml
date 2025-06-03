@@ -13,10 +13,9 @@ jobs:
       - name: Send Slack notification
         uses: slackapi/slack-github-action@v1.22.0
         with:
-          channel-id: C08V8NGRZAN
+          channel-id: "#new-channel"
           payload: >
             {
-              "channel": "C08V8NGRZAN",
               "text": ":rocket: A push was made to main!",
               "blocks": [
                 {
