@@ -15,7 +15,7 @@ jobs:
         with:
           payload: >
             {
-              "channel": "#alerts",
+              "channel": "C08V8NGRZAN",
               "text": ":rocket: A push was made to main!",
               "blocks": [
                 {
