@@ -13,10 +13,10 @@ jobs:
       - name: Send Slack notification
         uses: slackapi/slack-github-action@v1.24.0
         with:
-          payload: |
+          payload: >
             {
-              "channel": "#alerts",  # change to your channel
-              "text": ":rocket: A push was made to *main*!",
+              "channel": "#alerts",
+              "text": ":rocket: A push was made to main!",
               "blocks": [
                 {
                   "type": "section",
@@ -30,11 +30,11 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Repository:*\n${{ github.repository }}"
+                      "text": "*Repository:* ${{ github.repository }}"
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Pusher:*\n${{ github.actor }}"
+                      "text": "*Pusher:* ${{ github.actor }}"
                     }
                   ]
                 },
@@ -42,7 +42,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "View commit: ${{ github.event.head_commit.url }}"
+                    "text": "View commit: <${{ github.event.head_commit.url }}|${{ github.event.head_commit.id }}}>"
                   }
                 }
               ]
